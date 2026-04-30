@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Trip Makers | Luxury Travel Experiences</title>
+<title>The Trip Makers | Luxury Travel</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -19,18 +19,39 @@ body{
 nav{
     position:fixed;
     width:100%;
-    padding:20px 60px;
+    padding:15px 60px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,0.4);
+    background:rgba(0,0,0,0.5);
     backdrop-filter:blur(10px);
     z-index:999;
 }
 
-nav h2{
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:60px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand{
     font-weight:700;
-    letter-spacing:1px;
+    font-size:18px;
+    color:#1fa2a6;
+}
+
+.tagline{
+    font-size:12px;
+    color:#ff7a00;
 }
 
 nav a{
@@ -78,12 +99,11 @@ nav a{
     transform:scale(1.08);
 }
 
-/* SECTION */
+/* DESTINATIONS */
 section{
     padding:100px 60px;
 }
 
-/* DESTINATIONS */
 .cards{
     display:flex;
     gap:25px;
@@ -98,7 +118,6 @@ section{
     border-radius:20px;
     overflow:hidden;
     position:relative;
-    cursor:pointer;
 }
 
 .card img{
@@ -120,18 +139,6 @@ section{
     position:absolute;
     bottom:20px;
     left:20px;
-    font-size:24px;
-}
-
-/* EXPERIENCE */
-.experience{
-    text-align:center;
-}
-
-.experience p{
-    max-width:700px;
-    margin:20px auto;
-    opacity:0.8;
 }
 
 /* PACKAGES */
@@ -142,28 +149,12 @@ section{
     display:inline-block;
     margin:15px;
     backdrop-filter:blur(15px);
-    transition:0.3s;
-}
-
-.package:hover{
-    transform:translateY(-10px);
 }
 
 .price{
     color:#ff7a00;
     font-size:26px;
     margin-top:10px;
-}
-
-/* TESTIMONIALS */
-.testimonials{
-    text-align:center;
-}
-
-.testimonial{
-    max-width:500px;
-    margin:20px auto;
-    opacity:0.8;
 }
 
 /* CTA */
@@ -213,8 +204,16 @@ section{padding:60px 20px;}
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-<h2>The Trip Makers</h2>
+<div class="logo">
+    <img src="logo.png" alt="The Trip Makers">
+    <div class="logo-text">
+        <span class="brand">The Trip Makers</span>
+        <span class="tagline">Ek suhana safar</span>
+    </div>
+</div>
+
 <div>
 <a href="#">Home</a>
 <a href="#dest">Destinations</a>
@@ -223,14 +222,16 @@ section{padding:60px 20px;}
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div>
-<h1>Curated Luxury Travel Experiences</h1>
-<p>From exotic beaches to iconic cities — travel redefined</p>
+<h1>Curated Journeys,<br>Unforgettable Memories</h1>
+<p>Luxury travel experiences crafted just for you</p>
 <a href="#dest" class="btn">Explore Destinations</a>
 </div>
 </section>
 
+<!-- DESTINATIONS -->
 <section id="dest">
 <h2>Top Destinations</h2>
 
@@ -252,11 +253,7 @@ section{padding:60px 20px;}
 </div>
 </section>
 
-<section class="experience">
-<h2>Why Travel With Us</h2>
-<p>We craft seamless travel experiences with handpicked stays, guided tours, and personalized itineraries — ensuring every journey is unforgettable.</p>
-</section>
-
+<!-- PACKAGES -->
 <section id="pack">
 <h2>Exclusive Packages</h2>
 
@@ -274,30 +271,25 @@ section{padding:60px 20px;}
 
 <div class="package">
 <h3>Maldives Retreat</h3>
-<p>3 Nights • Water Villa Stay</p>
+<p>3 Nights • Water Villa</p>
 <div class="price">₹89,999</div>
 </div>
 </section>
 
-<section class="testimonials">
-<h2>What Our Travelers Say</h2>
-
-<div class="testimonial">"Perfectly organized trip. Everything was seamless!"</div>
-<div class="testimonial">"Luxury experience at the best price. Highly recommended."</div>
-</section>
-
+<!-- CTA -->
 <section id="contact" class="cta">
-<h2>Ready To Explore The World?</h2>
-<p>Limited slots available for upcoming departures</p>
+<h2>Plan Your Next Trip Today</h2>
+<p>Limited seats available • Best prices guaranteed</p>
 <a href="https://wa.me/918777538095">Chat on WhatsApp</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 The Trip Makers • All Rights Reserved
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/918777538095" class="whatsapp">💬</a>
 
 </body>
 </html>
-```
