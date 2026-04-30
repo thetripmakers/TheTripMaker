@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Trip Makers | Luxury Travel Experiences</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background:#0b0f1a;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+nav h2{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:#fff;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:700;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+    opacity:0.9;
+}
+
+.btn{
+    padding:14px 32px;
+    background:linear-gradient(45deg,#ff7a00,#ff3c00);
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* SECTION */
+section{
+    padding:100px 60px;
+}
+
+/* DESTINATIONS */
+.cards{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    width:300px;
+    height:420px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60%;
+    background:linear-gradient(transparent,rgba(0,0,0,0.85));
+}
+
+.card h3{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    font-size:24px;
+}
+
+/* EXPERIENCE */
+.experience{
+    text-align:center;
+}
+
+.experience p{
+    max-width:700px;
+    margin:20px auto;
+    opacity:0.8;
+}
+
+/* PACKAGES */
+.package{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    display:inline-block;
+    margin:15px;
+    backdrop-filter:blur(15px);
+    transition:0.3s;
+}
+
+.package:hover{
+    transform:translateY(-10px);
+}
+
+.price{
+    color:#ff7a00;
+    font-size:26px;
+    margin-top:10px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+    text-align:center;
+}
+
+.testimonial{
+    max-width:500px;
+    margin:20px auto;
+    opacity:0.8;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(45deg,#ff7a00,#ff3c00);
+    text-align:center;
+    padding:80px 20px;
+}
+
+.cta a{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#000;
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    opacity:0.6;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:36px;}
+section{padding:60px 20px;}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>The Trip Makers</h2>
+<div>
+<a href="#">Home</a>
+<a href="#dest">Destinations</a>
+<a href="#pack">Packages</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Curated Luxury Travel Experiences</h1>
+<p>From exotic beaches to iconic cities — travel redefined</p>
+<a href="#dest" class="btn">Explore Destinations</a>
+</div>
+</section>
+
+<section id="dest">
+<h2>Top Destinations</h2>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528181304800-259b08848526">
+<h3>Thailand</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+<h3>Dubai</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2105c">
+<h3>Maldives</h3>
+</div>
+</div>
+</section>
+
+<section class="experience">
+<h2>Why Travel With Us</h2>
+<p>We craft seamless travel experiences with handpicked stays, guided tours, and personalized itineraries — ensuring every journey is unforgettable.</p>
+</section>
+
+<section id="pack">
+<h2>Exclusive Packages</h2>
+
+<div class="package">
+<h3>Thailand Escape</h3>
+<p>5 Days • Phuket + Krabi</p>
+<div class="price">₹49,999</div>
+</div>
+
+<div class="package">
+<h3>Dubai Luxury</h3>
+<p>4 Days • City + Desert Safari</p>
+<div class="price">₹65,999</div>
+</div>
+
+<div class="package">
+<h3>Maldives Retreat</h3>
+<p>3 Nights • Water Villa Stay</p>
+<div class="price">₹89,999</div>
+</div>
+</section>
+
+<section class="testimonials">
+<h2>What Our Travelers Say</h2>
+
+<div class="testimonial">"Perfectly organized trip. Everything was seamless!"</div>
+<div class="testimonial">"Luxury experience at the best price. Highly recommended."</div>
+</section>
+
+<section id="contact" class="cta">
+<h2>Ready To Explore The World?</h2>
+<p>Limited slots available for upcoming departures</p>
+<a href="https://wa.me/918777538095">Chat on WhatsApp</a>
+</section>
+
+<footer>
+© 2026 The Trip Makers • All Rights Reserved
+</footer>
+
+<a href="https://wa.me/918777538095" class="whatsapp">💬</a>
+
+</body>
+</html>
+```
