@@ -20,8 +20,8 @@ color:#fff;
 nav{
 position:fixed;width:100%;padding:15px 60px;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 z-index:999;
 }
 
@@ -44,10 +44,18 @@ display:flex;align-items:center;justify-content:center;text-align:center;
 .hero h1{font-size:50px;margin-bottom:20px;}
 .btn{background:#ff7a00;padding:12px 30px;border-radius:30px;color:#fff;text-decoration:none;}
 
+/* TRUST */
+.trust{
+display:flex;justify-content:center;gap:40px;padding:40px;background:#050914;
+flex-wrap:wrap;
+}
+
+.trust div{text-align:center;}
+.trust h2{color:#ff7a00;}
+
 /* SECTION */
 section{padding:80px 60px;}
 
-/* CARDS */
 .cards{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;}
 
 .card{
@@ -57,15 +65,14 @@ width:280px;height:350px;border-radius:20px;overflow:hidden;position:relative;
 .card img{width:100%;height:100%;object-fit:cover;}
 .card h3{position:absolute;bottom:15px;left:15px;}
 
-/* GLASS PACKAGES */
+/* PACKAGES */
 .packages{
-display:flex;flex-wrap:wrap;gap:25px;justify-content:center;margin-top:30px;
+display:flex;flex-wrap:wrap;gap:25px;justify-content:center;
 }
 
 .package{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.1);
 padding:25px;
 border-radius:20px;
 width:280px;
@@ -73,64 +80,53 @@ transition:0.3s;
 }
 
 .package:hover{transform:translateY(-10px);}
+.price{color:#ff7a00;font-size:24px;margin-top:10px;}
 
-.price{
-color:#ff7a00;
-font-size:24px;
-margin-top:10px;
+/* TESTIMONIALS */
+.testimonials{text-align:center;}
+.review{
+max-width:400px;margin:20px auto;
+background:rgba(255,255,255,0.05);
+padding:20px;border-radius:15px;
+}
+
+/* FORM */
+.form{
+max-width:400px;margin:auto;
+display:flex;flex-direction:column;gap:10px;
+}
+
+.form input, .form select{
+padding:12px;border:none;border-radius:10px;
+}
+
+.form button{
+background:#ff7a00;color:#fff;border:none;padding:12px;border-radius:30px;
 }
 
 /* CTA */
 .cta{
 text-align:center;
 background:linear-gradient(45deg,#ff7a00,#ff3c00);
-padding:60px 20px;
-border-radius:20px;
-margin:40px;
-}
-
-.cta a{
-background:#000;
-padding:12px 25px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
-}
-
-/* ADDRESS */
-.address{
-text-align:center;
-margin-top:30px;
-opacity:0.8;
+padding:50px;margin:30px;border-radius:20px;
 }
 
 /* FOOTER */
-footer{
-padding:20px;
-text-align:center;
-}
+footer{text-align:center;padding:20px;}
 
-.social a{
-color:#fff;margin:0 10px;font-size:20px;
-}
+.social a{color:#fff;margin:0 10px;font-size:20px;}
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:55px;height:55px;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;width:55px;height:55px;
 display:flex;align-items:center;justify-content:center;
-border-radius:50%;
-font-size:26px;
+border-radius:50%;font-size:26px;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-.hero h1{font-size:32px;}
+.hero h1{font-size:30px;}
 section{padding:50px 20px;}
 }
 </style>
@@ -152,40 +148,29 @@ section{padding:50px 20px;}
 <a href="#">Home</a>
 <a href="#domestic">Domestic</a>
 <a href="#international">International</a>
-<a href="#contact">Contact</a>
+<a href="#contact">Enquiry</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 <div>
-<h1>Curated Journeys, Unforgettable Memories</h1>
-<a href="#domestic" class="btn">Explore</a>
+<h1>Explore The World With Confidence</h1>
+<a href="#contact" class="btn">Get Free Quote</a>
 </div>
 </section>
 
+<!-- TRUST -->
+<div class="trust">
+<div><h2>50+</h2><p>Destinations</p></div>
+<div><h2>10K+</h2><p>Happy Travelers</p></div>
+<div><h2>5+</h2><p>Years Experience</p></div>
+<div><h2>24/7</h2><p>Support</p></div>
+</div>
+
 <!-- DOMESTIC -->
 <section id="domestic">
-<h2>Domestic Destinations</h2>
-
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1595815771614-ade501c1ff1c">
-<h3>Kashmir</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
-<h3>Manali</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a">
-<h3>Rajasthan</h3>
-</div>
-</div>
-
-<h2 style="margin-top:50px;">Domestic Packages</h2>
+<h2>Domestic Packages</h2>
 <div class="packages">
 
 <div class="package">
@@ -201,7 +186,7 @@ section{padding:50px 20px;}
 </div>
 
 <div class="package">
-<h3>Royal Rajasthan</h3>
+<h3>Rajasthan Tour</h3>
 <p>6 Days • Jaipur + Udaipur</p>
 <div class="price">₹39,999</div>
 </div>
@@ -211,26 +196,7 @@ section{padding:50px 20px;}
 
 <!-- INTERNATIONAL -->
 <section id="international">
-<h2>International Destinations</h2>
-
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1528181304800-259b08848526">
-<h3>Thailand</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
-<h3>Dubai</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd">
-<h3>Maldives</h3>
-</div>
-</div>
-
-<h2 style="margin-top:50px;">International Packages</h2>
+<h2>International Packages</h2>
 <div class="packages">
 
 <div class="package">
@@ -254,16 +220,37 @@ section{padding:50px 20px;}
 </div>
 </section>
 
-<!-- CTA -->
-<section id="contact" class="cta">
-<h2>Plan Your Trip Now</h2>
-<p>Call or WhatsApp: 9725083954</p>
-<a href="https://wa.me/919725083954">Chat on WhatsApp</a>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+<h2>What Our Travelers Say</h2>
 
-<div class="address">
-SF 33, Vartali Complex, Swastik Rd, Shrimali Society,<br>
-Navrangpura, Ahmedabad, Gujarat 380009
+<div class="review">"Amazing experience! Everything was perfectly managed."</div>
+<div class="review">"Best travel service, highly recommended!"</div>
+
+</section>
+
+<!-- FORM -->
+<section id="contact">
+<h2>Get Your Free Travel Quote</h2>
+
+<div class="form">
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Phone Number">
+<select>
+<option>Select Destination</option>
+<option>Kashmir</option>
+<option>Dubai</option>
+<option>Thailand</option>
+</select>
+<button>Submit Inquiry</button>
 </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Call or WhatsApp: 9725083954</h2>
+<a href="https://wa.me/919725083954" class="btn">Chat Now</a>
 </section>
 
 <!-- FOOTER -->
@@ -276,6 +263,8 @@ Navrangpura, Ahmedabad, Gujarat 380009
 <a href="https://www.linkedin.com/company/the-trip-makers-ek-suhana-safar/" target="_blank"><i class="fab fa-linkedin"></i></a>
 <a href="mailto:inquiry@thetripmakers.co.in"><i class="fas fa-envelope"></i></a>
 </div>
+
+<p>SF 33, Vartali Complex, Navrangpura, Ahmedabad</p>
 </footer>
 
 <!-- WHATSAPP -->
