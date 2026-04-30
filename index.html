@@ -12,16 +12,16 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background: radial-gradient(circle at top left, #0d1b2a, #020617);
-color:#fff;
+background:#f5f7fb;
+color:#222;
 }
 
 /* NAV */
 nav{
 position:fixed;width:100%;padding:15px 60px;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 z-index:999;
 }
 
@@ -30,29 +30,25 @@ z-index:999;
 .brand{color:#1fa2a6;font-weight:700;}
 .tagline{color:#ff7a00;font-size:12px;}
 
-.nav-links a{color:#fff;margin-left:25px;text-decoration:none;}
+.nav-links a{color:#222;margin-left:25px;text-decoration:none;}
 
 /* HERO */
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+height:90vh;
+background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
 background-size:cover;
 display:flex;align-items:center;justify-content:center;text-align:center;
+color:#fff;
 }
 
-.hero h1{font-size:50px;margin-bottom:20px;}
+.hero h1{font-size:45px;}
 .btn{
-background:linear-gradient(45deg,#ff7a00,#ff3c00);
-padding:12px 30px;border-radius:30px;color:#fff;text-decoration:none;
+background:#ff7a00;
+padding:12px 30px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
 }
-
-/* TRUST */
-.trust{
-display:flex;justify-content:center;gap:40px;padding:40px;
-flex-wrap:wrap;
-}
-.trust h2{color:#ff7a00;}
 
 /* SECTION */
 section{padding:80px 60px;}
@@ -62,78 +58,84 @@ section{padding:80px 60px;}
 
 .card{
 width:280px;height:350px;border-radius:20px;overflow:hidden;position:relative;
-transition:0.4s;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-.card:hover{transform:scale(1.05);}
+
 .card img{width:100%;height:100%;object-fit:cover;}
-.card h3{position:absolute;bottom:15px;left:15px;}
+.card h3{position:absolute;bottom:15px;left:15px;color:#fff;}
 
-/* GLASS PACKAGES */
-.packages{
-display:flex;flex-wrap:wrap;gap:25px;justify-content:center;
-}
-
+/* PACKAGES */
 .package{
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.1);
-padding:25px;border-radius:20px;width:280px;
-transition:0.3s;
-}
-.package:hover{transform:translateY(-10px);}
-.price{color:#ff7a00;font-size:24px;margin-top:10px;}
-
-/* TESTIMONIAL */
-.review{
-max-width:400px;margin:20px auto;
-background:rgba(255,255,255,0.05);
-padding:20px;border-radius:15px;
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:280px;
 }
 
-/* FORM */
+.price{color:#ff7a00;font-size:22px;margin-top:10px;}
+
+/* FORM FIX */
+#contact{
+margin-top:50px;
+}
+
 .form{
 max-width:400px;margin:auto;
-display:flex;flex-direction:column;gap:10px;
+display:flex;flex-direction:column;gap:12px;
 }
+
 .form input, .form select{
-padding:12px;border-radius:10px;border:none;
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
 }
+
 .form button{
-background:#ff7a00;color:#fff;border:none;padding:12px;border-radius:30px;
+background:#ff7a00;color:#fff;
+border:none;padding:12px;border-radius:30px;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-background:linear-gradient(45deg,#ff7a00,#ff3c00);
-padding:50px;border-radius:20px;margin:30px;
+background:#ff7a00;
+padding:40px;
+color:#fff;
+border-radius:15px;
+margin:40px;
 }
 
-/* ADDRESS */
-.address{text-align:center;margin-top:20px;opacity:0.8;}
-
 /* FOOTER */
-footer{text-align:center;padding:20px;}
-.social a{color:#fff;margin:0 10px;font-size:20px;}
+footer{
+background:#fff;
+padding:20px;
+text-align:center;
+}
+
+.social a{
+color:#222;margin:0 10px;font-size:20px;
+}
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;width:55px;height:55px;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:55px;height:55px;
 display:flex;align-items:center;justify-content:center;
-border-radius:50%;font-size:26px;
+border-radius:50%;
+font-size:26px;
+color:#fff;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero h1{font-size:30px;}
-section{padding:50px 20px;}
-}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="logo">
 <img src="logo.png">
@@ -147,30 +149,25 @@ section{padding:50px 20px;}
 <a href="#">Home</a>
 <a href="#domestic">Domestic</a>
 <a href="#international">International</a>
-<a href="#contact">Enquiry</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div>
-<h1>Curated Journeys, Unforgettable Memories</h1>
-<a href="#contact" class="btn">Get Free Quote</a>
+<h1>Explore The World With Us</h1>
+<a href="#contact" class="btn">Get Quote</a>
 </div>
 </section>
 
-<div class="trust">
-<div><h2>50+</h2><p>Destinations</p></div>
-<div><h2>10K+</h2><p>Travelers</p></div>
-<div><h2>5+</h2><p>Years</p></div>
-<div><h2>24/7</h2><p>Support</p></div>
-</div>
-
+<!-- DOMESTIC -->
 <section id="domestic">
 <h2>Domestic Destinations</h2>
 
 <div class="cards">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1595815771614-ade501c1ff1c">
+<img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7">
 <h3>Kashmir</h3>
 </div>
 
@@ -184,66 +181,79 @@ section{padding:50px 20px;}
 <h3>Rajasthan</h3>
 </div>
 </div>
-
-<h2 style="margin-top:50px;">Domestic Packages</h2>
-<div class="packages">
-<div class="package"><h3>Kashmir Delight</h3><p>5 Days</p><div class="price">₹29,999</div></div>
-<div class="package"><h3>Manali Trip</h3><p>4 Days</p><div class="price">₹24,999</div></div>
-<div class="package"><h3>Rajasthan Tour</h3><p>6 Days</p><div class="price">₹39,999</div></div>
-</div>
 </section>
 
+<!-- INTERNATIONAL -->
 <section id="international">
 <h2>International Destinations</h2>
 
 <div class="cards">
-<div class="card"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"><h3>Dubai</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"><h3>Maldives</h3></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528181304800-259b08848526">
+<h3>Thailand</h3>
 </div>
 
-<h2 style="margin-top:50px;">International Packages</h2>
-<div class="packages">
-<div class="package"><h3>Thailand Escape</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Dubai Luxury</h3><div class="price">₹65,999</div></div>
-<div class="package"><h3>Maldives Retreat</h3><div class="price">₹89,999</div></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+<h3>Dubai</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd">
+<h3>Maldives</h3>
+</div>
 </div>
 </section>
 
-<section class="testimonials">
-<h2>What Our Travelers Say</h2>
-<div class="review">"Amazing experience!"</div>
-<div class="review">"Highly recommended!"</div>
-</section>
-
+<!-- FORM -->
 <section id="contact">
-<h2>Get Your Free Quote</h2>
+<h2 style="text-align:center;">Get Travel Quote</h2>
+
 <div class="form">
-<input type="text" placeholder="Name">
-<input type="tel" placeholder="Phone">
-<select><option>Select Destination</option></select>
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Phone Number">
+
+<select>
+<option>Select Destination</option>
+
+<!-- INDIA -->
+<option>Kashmir</option>
+<option>Manali</option>
+<option>Rajasthan</option>
+<option>Goa</option>
+<option>Kerala</option>
+
+<!-- INTERNATIONAL -->
+<option>Dubai</option>
+<option>Thailand</option>
+<option>Maldives</option>
+<option>Singapore</option>
+<option>Bali</option>
+
+</select>
+
 <button>Submit</button>
 </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
 <h2>Call or WhatsApp: 9725083954</h2>
-<a href="https://wa.me/919725083954" class="btn">Chat Now</a>
-
-<div class="address">
-SF 33, Vartali Complex, Navrangpura, Ahmedabad
-</div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 The Trip Makers</p>
+
 <div class="social">
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.instagram.com/the_trip_makers_/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/thetripmakersfacebook" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.linkedin.com/company/the-trip-makers-ek-suhana-safar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:inquiry@thetripmakers.co.in"><i class="fas fa-envelope"></i></a>
 </div>
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/919725083954" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
