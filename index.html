@@ -64,21 +64,8 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 .card img{width:100%;height:100%;object-fit:cover;}
 .card h3{position:absolute;bottom:15px;left:15px;color:#fff;}
 
-/* PACKAGES */
-.package{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-width:280px;
-}
-
-.price{color:#ff7a00;font-size:22px;margin-top:10px;}
-
-/* FORM FIX */
-#contact{
-margin-top:50px;
-}
+/* FORM */
+#contact{margin-top:50px;}
 
 .form{
 max-width:400px;margin:auto;
@@ -94,6 +81,7 @@ border:1px solid #ddd;
 .form button{
 background:#ff7a00;color:#fff;
 border:none;padding:12px;border-radius:30px;
+cursor:pointer;
 }
 
 /* CTA */
@@ -104,6 +92,17 @@ padding:40px;
 color:#fff;
 border-radius:15px;
 margin:40px;
+}
+
+/* ADDRESS */
+.address-box{
+margin-top:25px;
+background:rgba(255,255,255,0.2);
+padding:20px;
+border-radius:15px;
+max-width:400px;
+margin-left:auto;
+margin-right:auto;
 }
 
 /* FOOTER */
@@ -210,35 +209,45 @@ color:#fff;
 <h2 style="text-align:center;">Get Travel Quote</h2>
 
 <div class="form">
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Phone Number">
+<input type="text" id="name" placeholder="Your Name">
+<input type="tel" id="phone" placeholder="Phone Number">
 
-<select>
-<option>Select Destination</option>
-
-<!-- INDIA -->
+<select id="destination">
+<option value="">Select Destination</option>
 <option>Kashmir</option>
 <option>Manali</option>
 <option>Rajasthan</option>
 <option>Goa</option>
 <option>Kerala</option>
-
-<!-- INTERNATIONAL -->
 <option>Dubai</option>
 <option>Thailand</option>
 <option>Maldives</option>
 <option>Singapore</option>
 <option>Bali</option>
-
 </select>
 
-<button>Submit</button>
+<button onclick="sendToWhatsApp()">Submit</button>
 </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Call or WhatsApp: 9725083954</h2>
+<h2>Plan Your Trip Now</h2>
+<p>Call or WhatsApp: 9725083954</p>
+
+<a href="https://wa.me/919725083954" class="btn">Chat on WhatsApp</a>
+
+<div class="address-box">
+<h4>Our Office</h4>
+<p>
+SF 33, Vartali Complex,<br>
+Swastik Rd, Shrimali Society,<br>
+Navrangpura, Ahmedabad,<br>
+Gujarat 380009
+</p>
+
+<p>Email: <a href="mailto:inquiry@thetripmakers.co.in" style="color:white;">inquiry@thetripmakers.co.in</a></p>
+</div>
 </section>
 
 <!-- FOOTER -->
@@ -257,6 +266,25 @@ color:#fff;
 <a href="https://wa.me/919725083954" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- SCRIPT -->
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var destination = document.getElementById("destination").value;
+
+    if(name === "" || phone === "" || destination === "") {
+        alert("Please fill all details");
+        return;
+    }
+
+    var message = `New Travel Inquiry:%0AName: ${name}%0APhone: ${phone}%0ADestination: ${destination}`;
+    var url = "https://wa.me/919725083954?text=" + message;
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
