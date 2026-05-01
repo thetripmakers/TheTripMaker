@@ -9,11 +9,12 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
+html{scroll-behavior:smooth;}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#f5f7fb;color:#222;}
 
-/* NAVBAR */
-.main-nav{
+/* NAV */
+nav{
 position:fixed;width:100%;top:0;
 background:#fff;padding:15px 50px;
 display:flex;justify-content:space-between;align-items:center;
@@ -34,12 +35,10 @@ box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:999;
 display:none;position:absolute;top:35px;
 background:#fff;border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+min-width:150px;
 }
-.dropdown-menu li{padding:10px 15px;}
+.dropdown-menu li{padding:10px;}
 .dropdown:hover .dropdown-menu{display:block;}
-
-/* ICONS */
-.nav-icons i{margin-left:15px;cursor:pointer;}
 
 /* HERO */
 .hero{
@@ -105,8 +104,7 @@ border-radius:50%;font-size:26px;color:#fff;
 <body>
 
 <!-- NAV -->
-<nav class="main-nav">
-
+<nav>
 <div class="logo">
 <img src="logo.png">
 <div>
@@ -116,78 +114,110 @@ border-radius:50%;font-size:26px;color:#fff;
 </div>
 
 <ul class="menu">
-<li><a href="#">Home</a></li>
+<li><a href="#home">Home</a></li>
 
 <li class="dropdown">
-<a href="#">Domestic ▾</a>
+<a href="#domestic">Domestic ▾</a>
 <ul class="dropdown-menu">
-<li><a href="#">Kashmir</a></li>
-<li><a href="#">Goa</a></li>
-<li><a href="#">Kerala</a></li>
-<li><a href="#">Himachal</a></li>
+<li><a href="#kashmir">Kashmir</a></li>
+<li><a href="#manali">Manali</a></li>
+<li><a href="#rajasthan">Rajasthan</a></li>
 </ul>
 </li>
 
 <li class="dropdown">
-<a href="#">International ▾</a>
+<a href="#international">International ▾</a>
 <ul class="dropdown-menu">
-<li><a href="#">Dubai</a></li>
-<li><a href="#">Thailand</a></li>
-<li><a href="#">Bali</a></li>
-<li><a href="#">Maldives</a></li>
+<li><a href="#dubai">Dubai</a></li>
+<li><a href="#thailand">Thailand</a></li>
+<li><a href="#maldives">Maldives</a></li>
 </ul>
 </li>
 
-<li><a href="#">Blog</a></li>
-<li><a href="#">Promotions</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#promotions">Promotions</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
-<div class="nav-icons">
-<i class="fas fa-search"></i>
-<i class="fas fa-user"></i>
-</div>
-
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
 <div>
 <h1>Explore The World With Us</h1>
 <a href="#contact" class="btn">Get Quote</a>
 </div>
 </section>
 
-<!-- DESTINATIONS -->
-<section>
-<h2>Top Destinations</h2>
-
+<!-- DOMESTIC -->
+<section id="domestic">
+<h2>Domestic Destinations</h2>
 <div class="cards">
-<div class="card"><img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7"><h3>Kashmir</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23"><h3>Manali</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
+
+<div class="card" id="kashmir">
+<img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7">
+<h3>Kashmir</h3>
+</div>
+
+<div class="card" id="manali">
+<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
+<h3>Manali</h3>
+</div>
+
+<div class="card" id="rajasthan">
+<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a">
+<h3>Rajasthan</h3>
+</div>
+
+</div>
+
+<h2 style="margin-top:50px;">Domestic Packages</h2>
+<div class="packages">
+<div class="package"><h3>Kashmir Delight</h3><div class="price">₹29,999</div></div>
+<div class="package"><h3>Goa Trip</h3><div class="price">₹19,999</div></div>
 </div>
 </section>
 
-<!-- PACKAGES -->
-<section>
-<h2>Popular Packages</h2>
+<!-- INTERNATIONAL -->
+<section id="international">
+<h2>International Destinations</h2>
 
+<div class="cards">
+<div class="card" id="dubai"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"><h3>Dubai</h3></div>
+<div class="card" id="thailand"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
+<div class="card" id="maldives"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"><h3>Maldives</h3></div>
+</div>
+
+<h2 style="margin-top:50px;">International Packages</h2>
 <div class="packages">
-<div class="package"><h3>Kashmir Delight</h3><p>5 Days</p><div class="price">₹29,999</div></div>
-<div class="package"><h3>Dubai Luxury</h3><p>4 Days</p><div class="price">₹65,999</div></div>
-<div class="package"><h3>Thailand Tour</h3><p>5 Days</p><div class="price">₹49,999</div></div>
+<div class="package"><h3>Dubai Luxury</h3><div class="price">₹65,999</div></div>
+<div class="package"><h3>Thailand Tour</h3><div class="price">₹49,999</div></div>
+</div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+<h2>Travel Blog</h2>
+<div class="packages">
+<div class="package"><h3>Kashmir Guide</h3><p>Best places to visit</p></div>
+<div class="package"><h3>Dubai Travel Tips</h3><p>Top attractions & hacks</p></div>
+</div>
+</section>
+
+<!-- PROMOTIONS -->
+<section id="promotions">
+<h2>Special Offers</h2>
+<div class="packages">
+<div class="package"><h3>Goa Summer Deal</h3><div class="price">₹14,999</div></div>
+<div class="package"><h3>Dubai Discount</h3><div class="price">₹55,999</div></div>
 </div>
 </section>
 
 <!-- REVIEWS -->
 <section>
 <h2>Google Reviews</h2>
-
 <div class="reviews">
-<div class="review">⭐⭐⭐⭐⭐ <b>Sheetal Sharma</b><br>Perfectly planned trip!</div>
-<div class="review">⭐⭐⭐⭐⭐ <b>Nayan Shah</b><br>Excellent service</div>
-<div class="review">⭐⭐⭐⭐⭐ <b>Rupangi Patel</b><br>Amazing experience</div>
+<div class="review">⭐⭐⭐⭐⭐ Sheetal Sharma - Amazing service!</div>
+<div class="review">⭐⭐⭐⭐⭐ Nayan Shah - Highly recommended!</div>
 </div>
 </section>
 
@@ -214,40 +244,34 @@ border-radius:50%;font-size:26px;color:#fff;
 <!-- ADDRESS -->
 <div class="address-box">
 <h3>Our Office</h3>
-<p>
-SF 33, Vartali Complex,<br>
-Navrangpura, Ahmedabad
-</p>
+<p>SF 33, Vartali Complex, Navrangpura, Ahmedabad</p>
 </div>
 
 <!-- FOOTER -->
 <footer>
 <p>© 2026 The Trip Makers</p>
-
 <div class="social">
 <a href="#"><i class="fab fa-instagram"></i></a>
 <a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-linkedin"></i></a>
 </div>
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/919725083954" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
 function sendToWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let dest=document.getElementById("destination").value;
+let n=document.getElementById("name").value;
+let p=document.getElementById("phone").value;
+let d=document.getElementById("destination").value;
 
-if(name==""||phone==""||dest==""){
+if(n==""||p==""||d==""){
 alert("Fill all details");return;
 }
 
-let msg=`New Inquiry:%0AName:${name}%0APhone:${phone}%0ADestination:${dest}`;
-window.open("https://wa.me/919725083954?text="+msg,"_blank");
+let msg=`New Inquiry:%0AName:${n}%0APhone:${p}%0ADestination:${d}`;
+window.open("https://wa.me/919725083954?text="+msg);
 }
 </script>
 
