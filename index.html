@@ -10,7 +10,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{background:#f5f7fb;color:#222;}
 
 /* NAV */
@@ -32,7 +31,8 @@ background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:999;
 height:90vh;
 background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
 background-size:cover;
-display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+display:flex;align-items:center;justify-content:center;text-align:center;
+color:#fff;
 }
 .hero h1{font-size:45px;}
 .btn{background:#ff7a00;padding:12px 30px;border-radius:30px;color:#fff;text-decoration:none;}
@@ -40,7 +40,7 @@ display:flex;align-items:center;justify-content:center;text-align:center;color:#
 /* SECTION */
 section{padding:80px 60px;text-align:center;}
 
-/* CARDS */
+/* DESTINATION CARDS */
 .cards{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;}
 .card{
 width:280px;height:350px;border-radius:20px;overflow:hidden;position:relative;
@@ -58,11 +58,8 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);width:280px;
 .price{color:#ff7a00;font-size:22px;margin-top:10px;}
 
 /* REVIEWS */
-.reviews{background:#fff;padding:50px;border-radius:20px;margin:40px;}
-.review{
-background:#f1f3f8;padding:20px;border-radius:15px;margin:15px auto;
-max-width:500px;
-}
+.reviews{background:#fff;padding:40px;border-radius:20px;margin:30px;}
+.review{background:#f1f3f8;padding:15px;border-radius:10px;margin:10px;}
 
 /* FORM */
 .form{max-width:400px;margin:auto;display:flex;flex-direction:column;gap:12px;}
@@ -94,7 +91,6 @@ background:#25D366;width:55px;height:55px;
 display:flex;align-items:center;justify-content:center;
 border-radius:50%;font-size:26px;color:#fff;
 }
-
 </style>
 </head>
 
@@ -126,68 +122,64 @@ border-radius:50%;font-size:26px;color:#fff;
 </div>
 </section>
 
-<!-- DOMESTIC -->
+<!-- DESTINATIONS (OLD KEPT) -->
 <section id="domestic">
-<h2>Domestic Packages</h2>
+<h2>Domestic Destinations</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7">
+<h3>Kashmir</h3>
+</div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
+<h3>Manali</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a">
+<h3>Rajasthan</h3>
+</div>
+</div>
+
+<!-- NEW: DOMESTIC PACKAGES -->
+<h2 style="margin-top:50px;">Domestic Packages</h2>
 <div class="packages">
-<div class="package">
-<h3>Kashmir Delight</h3>
-<p>5 Days • Srinagar</p>
-<div class="price">₹29,999</div>
-</div>
-
-<div class="package">
-<h3>Manali Trip</h3>
-<p>4 Days • Kullu Manali</p>
-<div class="price">₹24,999</div>
-</div>
-
-<div class="package">
-<h3>Rajasthan Tour</h3>
-<p>6 Days • Jaipur Udaipur</p>
-<div class="price">₹39,999</div>
-</div>
+<div class="package"><h3>Kashmir Delight</h3><p>5 Days</p><div class="price">₹29,999</div></div>
+<div class="package"><h3>Manali Trip</h3><p>4 Days</p><div class="price">₹24,999</div></div>
+<div class="package"><h3>Rajasthan Tour</h3><p>6 Days</p><div class="price">₹39,999</div></div>
 </div>
 </section>
 
-<!-- INTERNATIONAL -->
+<!-- INTERNATIONAL (OLD + NEW) -->
 <section id="international">
-<h2>International Packages</h2>
+<h2>International Destinations</h2>
 
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"><h3>Dubai</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"><h3>Maldives</h3></div>
+</div>
+
+<h2 style="margin-top:50px;">International Packages</h2>
 <div class="packages">
-<div class="package">
-<h3>Dubai Luxury</h3>
-<p>4 Days • City Tour</p>
-<div class="price">₹65,999</div>
-</div>
-
-<div class="package">
-<h3>Thailand Escape</h3>
-<p>5 Days • Phuket</p>
-<div class="price">₹49,999</div>
-</div>
-
-<div class="package">
-<h3>Maldives Retreat</h3>
-<p>3 Nights • Water Villa</p>
-<div class="price">₹89,999</div>
-</div>
+<div class="package"><h3>Thailand Escape</h3><div class="price">₹49,999</div></div>
+<div class="package"><h3>Dubai Luxury</h3><div class="price">₹65,999</div></div>
+<div class="package"><h3>Maldives Retreat</h3><div class="price">₹89,999</div></div>
 </div>
 </section>
 
 <!-- GOOGLE REVIEWS -->
 <section>
 <h2>Google Reviews</h2>
-
 <div class="reviews">
-<div class="review">⭐⭐⭐⭐⭐ Amazing service! Highly recommend.</div>
-<div class="review">⭐⭐⭐⭐⭐ Best travel experience ever!</div>
-<div class="review">⭐⭐⭐⭐⭐ Smooth booking and great support.</div>
+<div class="review">⭐⭐⭐⭐⭐ Amazing experience!</div>
+<div class="review">⭐⭐⭐⭐⭐ Very professional service</div>
+<div class="review">⭐⭐⭐⭐⭐ Highly recommended</div>
 </div>
 </section>
 
-<!-- FORM -->
+<!-- FORM (OLD KEPT + FIXED) -->
 <section id="contact">
 <h2>Get Travel Quote</h2>
 
@@ -207,7 +199,7 @@ border-radius:50%;font-size:26px;color:#fff;
 </div>
 </section>
 
-<!-- ADDRESS -->
+<!-- ADDRESS (NEW PREMIUM) -->
 <div class="address-box">
 <h3>Our Office</h3>
 <p>
@@ -221,16 +213,14 @@ Ahmedabad, Gujarat 380009
 <!-- FOOTER -->
 <footer>
 <p>© 2026 The Trip Makers</p>
-
 <div class="social">
-<a href="https://www.instagram.com/the_trip_makers_/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/thetripmakersfacebook" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.linkedin.com/company/the-trip-makers-ek-suhana-safar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="mailto:inquiry@thetripmakers.co.in"><i class="fas fa-envelope"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
 </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/919725083954" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
