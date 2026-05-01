@@ -11,18 +11,13 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-background:#f5f7fb;
-color:#222;
-}
+body{background:#f5f7fb;color:#222;}
 
 /* NAV */
 nav{
 position:fixed;width:100%;padding:15px 60px;
 display:flex;justify-content:space-between;align-items:center;
-background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:999;
+background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:999;
 }
 
 .logo{display:flex;align-items:center;gap:10px;}
@@ -37,96 +32,67 @@ z-index:999;
 height:90vh;
 background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
 background-size:cover;
-display:flex;align-items:center;justify-content:center;text-align:center;
-color:#fff;
+display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
 }
-
 .hero h1{font-size:45px;}
-.btn{
-background:#ff7a00;
-padding:12px 30px;
-border-radius:30px;
-color:#fff;
-text-decoration:none;
-}
+.btn{background:#ff7a00;padding:12px 30px;border-radius:30px;color:#fff;text-decoration:none;}
 
 /* SECTION */
-section{padding:80px 60px;}
+section{padding:80px 60px;text-align:center;}
 
 /* CARDS */
 .cards{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;}
-
 .card{
 width:280px;height:350px;border-radius:20px;overflow:hidden;position:relative;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-
 .card img{width:100%;height:100%;object-fit:cover;}
 .card h3{position:absolute;bottom:15px;left:15px;color:#fff;}
 
+/* PACKAGES */
+.packages{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;margin-top:30px;}
+.package{
+background:#fff;padding:20px;border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);width:280px;
+}
+.price{color:#ff7a00;font-size:22px;margin-top:10px;}
+
+/* REVIEWS */
+.reviews{background:#fff;padding:50px;border-radius:20px;margin:40px;}
+.review{
+background:#f1f3f8;padding:20px;border-radius:15px;margin:15px auto;
+max-width:500px;
+}
+
 /* FORM */
-#contact{margin-top:50px;}
-
-.form{
-max-width:400px;margin:auto;
-display:flex;flex-direction:column;gap:12px;
+.form{max-width:400px;margin:auto;display:flex;flex-direction:column;gap:12px;}
+.form input,.form select{
+padding:12px;border-radius:10px;border:1px solid #ddd;
 }
-
-.form input, .form select{
-padding:12px;
-border-radius:10px;
-border:1px solid #ddd;
-}
-
 .form button{
-background:#ff7a00;color:#fff;
-border:none;padding:12px;border-radius:30px;
-cursor:pointer;
-}
-
-/* CTA */
-.cta{
-text-align:center;
-background:#ff7a00;
-padding:40px;
-color:#fff;
-border-radius:15px;
-margin:40px;
+background:#ff7a00;color:#fff;border:none;padding:12px;border-radius:30px;
 }
 
 /* ADDRESS */
 .address-box{
-margin-top:25px;
-background:rgba(255,255,255,0.2);
-padding:20px;
-border-radius:15px;
-max-width:400px;
-margin-left:auto;
-margin-right:auto;
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:450px;
+margin:40px auto;
 }
 
 /* FOOTER */
-footer{
-background:#fff;
-padding:20px;
-text-align:center;
-}
-
-.social a{
-color:#222;margin:0 10px;font-size:20px;
-}
+footer{background:#fff;padding:20px;text-align:center;}
+.social a{color:#222;margin:0 10px;font-size:20px;}
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:55px;height:55px;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;width:55px;height:55px;
 display:flex;align-items:center;justify-content:center;
-border-radius:50%;
-font-size:26px;
-color:#fff;
+border-radius:50%;font-size:26px;color:#fff;
 }
 
 </style>
@@ -162,51 +128,68 @@ color:#fff;
 
 <!-- DOMESTIC -->
 <section id="domestic">
-<h2>Domestic Destinations</h2>
+<h2>Domestic Packages</h2>
 
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7">
-<h3>Kashmir</h3>
+<div class="packages">
+<div class="package">
+<h3>Kashmir Delight</h3>
+<p>5 Days • Srinagar</p>
+<div class="price">₹29,999</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
-<h3>Manali</h3>
+<div class="package">
+<h3>Manali Trip</h3>
+<p>4 Days • Kullu Manali</p>
+<div class="price">₹24,999</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a">
-<h3>Rajasthan</h3>
+<div class="package">
+<h3>Rajasthan Tour</h3>
+<p>6 Days • Jaipur Udaipur</p>
+<div class="price">₹39,999</div>
 </div>
 </div>
 </section>
 
 <!-- INTERNATIONAL -->
 <section id="international">
-<h2>International Destinations</h2>
+<h2>International Packages</h2>
 
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1528181304800-259b08848526">
-<h3>Thailand</h3>
+<div class="packages">
+<div class="package">
+<h3>Dubai Luxury</h3>
+<p>4 Days • City Tour</p>
+<div class="price">₹65,999</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
-<h3>Dubai</h3>
+<div class="package">
+<h3>Thailand Escape</h3>
+<p>5 Days • Phuket</p>
+<div class="price">₹49,999</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd">
-<h3>Maldives</h3>
+<div class="package">
+<h3>Maldives Retreat</h3>
+<p>3 Nights • Water Villa</p>
+<div class="price">₹89,999</div>
 </div>
+</div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section>
+<h2>Google Reviews</h2>
+
+<div class="reviews">
+<div class="review">⭐⭐⭐⭐⭐ Amazing service! Highly recommend.</div>
+<div class="review">⭐⭐⭐⭐⭐ Best travel experience ever!</div>
+<div class="review">⭐⭐⭐⭐⭐ Smooth booking and great support.</div>
 </div>
 </section>
 
 <!-- FORM -->
 <section id="contact">
-<h2 style="text-align:center;">Get Travel Quote</h2>
+<h2>Get Travel Quote</h2>
 
 <div class="form">
 <input type="text" id="name" placeholder="Your Name">
@@ -215,40 +198,25 @@ color:#fff;
 <select id="destination">
 <option value="">Select Destination</option>
 <option>Kashmir</option>
-<option>Manali</option>
-<option>Rajasthan</option>
-<option>Goa</option>
-<option>Kerala</option>
 <option>Dubai</option>
 <option>Thailand</option>
 <option>Maldives</option>
-<option>Singapore</option>
-<option>Bali</option>
 </select>
 
 <button onclick="sendToWhatsApp()">Submit</button>
 </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-<h2>Plan Your Trip Now</h2>
-<p>Call or WhatsApp: 9725083954</p>
-
-<a href="https://wa.me/919725083954" class="btn">Chat on WhatsApp</a>
-
+<!-- ADDRESS -->
 <div class="address-box">
-<h4>Our Office</h4>
+<h3>Our Office</h3>
 <p>
 SF 33, Vartali Complex,<br>
-Swastik Rd, Shrimali Society,<br>
-Navrangpura, Ahmedabad,<br>
-Gujarat 380009
+Swastik Rd, Navrangpura,<br>
+Ahmedabad, Gujarat 380009
 </p>
-
-<p>Email: <a href="mailto:inquiry@thetripmakers.co.in" style="color:white;">inquiry@thetripmakers.co.in</a></p>
+<p>Email: inquiry@thetripmakers.co.in</p>
 </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
@@ -262,27 +230,23 @@ Gujarat 380009
 </div>
 </footer>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/919725083954" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- SCRIPT -->
 <script>
-function sendToWhatsApp() {
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var destination = document.getElementById("destination").value;
+function sendToWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let dest=document.getElementById("destination").value;
 
-    if(name === "" || phone === "" || destination === "") {
-        alert("Please fill all details");
-        return;
-    }
+if(name==""||phone==""||dest==""){
+alert("Fill all details");return;
+}
 
-    var message = `New Travel Inquiry:%0AName: ${name}%0APhone: ${phone}%0ADestination: ${destination}`;
-    var url = "https://wa.me/919725083954?text=" + message;
-
-    window.open(url, "_blank");
+let msg=`New Inquiry:%0AName:${name}%0APhone:${phone}%0ADestination:${dest}`;
+window.open("https://wa.me/919725083954?text="+msg,"_blank");
 }
 </script>
 
