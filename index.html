@@ -30,7 +30,6 @@ box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:999;
 .menu li{position:relative;}
 .menu a{text-decoration:none;color:#222;font-size:14px;}
 
-/* DROPDOWN */
 .dropdown-menu{
 display:none;position:absolute;top:35px;
 background:#fff;border-radius:10px;
@@ -71,9 +70,39 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);width:280px;
 }
 .price{color:#ff7a00;font-size:22px;margin-top:10px;}
 
-/* REVIEWS */
-.reviews{background:#fff;padding:40px;border-radius:20px;margin:30px;}
-.review{background:#f1f3f8;padding:15px;border-radius:10px;margin:10px;}
+/* PREMIUM REVIEWS */
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.review{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+border-radius:20px;
+padding:20px;
+text-align:left;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.review:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.review h4{
+margin-bottom:5px;
+font-size:15px;
+color:#1fa2a6;
+}
+
+.stars{
+color:#ff7a00;
+margin-bottom:10px;
+}
 
 /* FORM */
 .form{max-width:400px;margin:auto;display:flex;flex-direction:column;gap:12px;}
@@ -89,7 +118,19 @@ max-width:450px;margin:40px auto;
 
 /* FOOTER */
 footer{background:#fff;padding:20px;text-align:center;}
-.social a{color:#222;margin:0 10px;font-size:20px;}
+
+.social a{
+display:inline-block;
+margin:0 10px;
+font-size:20px;
+color:#222;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#ff7a00;
+transform:scale(1.2);
+}
 
 /* WHATSAPP */
 .whatsapp{
@@ -103,7 +144,6 @@ border-radius:50%;font-size:26px;color:#fff;
 
 <body>
 
-<!-- NAV -->
 <nav>
 <div class="logo">
 <img src="logo.png">
@@ -115,31 +155,13 @@ border-radius:50%;font-size:26px;color:#fff;
 
 <ul class="menu">
 <li><a href="#home">Home</a></li>
-
-<li class="dropdown">
-<a href="#domestic">Domestic ▾</a>
-<ul class="dropdown-menu">
-<li><a href="#kashmir">Kashmir</a></li>
-<li><a href="#manali">Manali</a></li>
-<li><a href="#rajasthan">Rajasthan</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#international">International ▾</a>
-<ul class="dropdown-menu">
-<li><a href="#dubai">Dubai</a></li>
-<li><a href="#thailand">Thailand</a></li>
-<li><a href="#maldives">Maldives</a></li>
-</ul>
-</li>
-
+<li><a href="#domestic">Domestic</a></li>
+<li><a href="#international">International</a></li>
 <li><a href="#promotions">Promotions</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
 <div>
 <h1>Explore The World With Us</h1>
@@ -147,129 +169,96 @@ border-radius:50%;font-size:26px;color:#fff;
 </div>
 </section>
 
-<!-- DOMESTIC -->
 <section id="domestic">
 <h2>Domestic Destinations</h2>
 <div class="cards">
-
-<div class="card" id="kashmir">
-<img src="https://https://www.bing.com/images/search?view=detailV2&ccid=BY7kCpx3&id=1A2DB0FF333F03B7095C983066B51FFBCBAFCB6E&thid=OIP.BY7kCpx3IkO7H0vLRxvvqwHaFj&mediaurl=https%3a%2f%2fi0.wp.com%2funusualplaces.org%2fwp-content%2fuploads%2f2018%2f11%2fkasmir.jpg&exph=1200&expw=1600&q=Beautiful+Kashmir&FORM=IRPRST&ck=2A09BA0952A568E5649236A03F12A48C&selectedIndex=4&itb=0">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1609942072337-4e3bfc2d95d7">
 <h3>Kashmir</h3>
 </div>
-
-<div class="card" id="manali">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
 <h3>Manali</h3>
 </div>
-
-<div class="card" id="rajasthan">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a">
 <h3>Rajasthan</h3>
 </div>
-
-</div>
-
-<h2 style="margin-top:50px;">Domestic Packages</h2>
-<div class="packages">
-<div class="package"><h3>Kashmir Delight</h3><div class="price">₹29,999</div></div>
-<div class="package"><h3>Goa Trip</h3><div class="price">₹19,999</div></div>
-<div class="package"><h3>Jaipur-The Pink city</h3><div class="price">₹19,999</div></div>
-<div class="package"><h3>Leh Ladak</h3><div class="price">₹19,999</div></div>
-<div class="package"><h3>Kerala</h3><div class="price">₹19,999</div></div>
-<div class="package"><h3>Darjeeling</h3><div class="price">₹19,999</div></div>
 </div>
 </section>
 
-<!-- INTERNATIONAL -->
 <section id="international">
 <h2>International Destinations</h2>
-
 <div class="cards">
-<div class="card" id="dubai"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"><h3>Dubai</h3></div>
-<div class="card" id="thailand"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
-<div class="card" id="maldives"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"><h3>Maldives</h3></div>
-</div>
-
-<h2 style="margin-top:50px;">International Packages</h2>
-<div class="packages">
-<div class="package"><h3>Dubai Luxury</h3><div class="price">₹65,999</div></div>
-<div class="package"><h3>Thailand Tour</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Hong Kong</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Singapore + Malaysia</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Bali</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Australia</h3><div class="price">₹49,999</div></div>
-<div class="package"><h3>Europe</h3><div class="price">₹49,999</div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"><h3>Dubai</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526"><h3>Thailand</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"><h3>Maldives</h3></div>
 </div>
 </section>
 
-<!-- PROMOTIONS -->
-<section id="promotions">
-<h2>Special Offers</h2>
-<div class="packages">
-<div class="package"><h3>Goa Summer Deal</h3><div class="price">₹14,999</div></div>
-<div class="package"><h3>Dubai Discount</h3><div class="price">₹55,999</div></div>
-<div class="package"><h3>Manali</h3><div class="price">₹55,999</div></div>
-<div class="package"><h3>Thailand</h3><div class="price">₹55,999</div></div>
-</div>
-</section>
-
-<!-- REVIEWS -->
 <section>
-<h2>Google Reviews</h2>
+<h2>What Our Clients Say</h2>
+
 <div class="reviews">
-<div class="review">⭐⭐⭐⭐⭐ Patel Chintu - The trip makers was very helpful in goa tripwith all the information provided. He was patient regarding all my concerns and assisted me all I needed. Without him, I would not have made it my trip. Thank you so much for your help, an exceptional customer service...Thank u so much 🙏 ...goa tirp …</div>
-<div class="review">⭐⭐⭐⭐⭐ Newedge Realty - We recently organized a company trip through The Trip Makers, and the entire experience was seamless and well-planned. From the very beginning, their team was supportive and suggested one of the best properties for our stay. The location was perfect, the property itself was stunning, and it provided the ideal environment for both relaxation and team bonding.
-The food throughout our stay was delicious, with a great variety and quality that impressed everyone in our group. Hotel service was also top-notch – staff members were courteous, prompt, and made sure we were comfortable at all times.
-A big thank you to The Trip Makers for helping us create such a memorable and enjoyable company outing. We look forward to planning our next trip with you!
-– Team Newedge Realty</div>
-<div class="review">⭐⭐⭐⭐⭐ Nitu Khatri - The Trip Makers team was extremely supportive throughout every aspect of our journey, from budgeting and planning to hotel arrangements and overall coordination. They specialize in creating cost-effective travel experiences without compromising on quality, which made our trip both affordable and enjoyable.
-Our group of 75 office employees had an amazing 2-night, 3-day trip, and everything was well-organized from start to finish. It was truly a memorable experience for all of us.
-Thank you, The Trip Makers, for such a wonderful and seamless trip!</div>
-<div class="review">⭐⭐⭐⭐⭐ Akshay Dhiryan - Great Experience
-Had a wonderful trip to Nainital with this travel company. Everything was smooth and well-organized. Special mention to our driver  he was extremely cooperative well-mannered, and drove very safely throughout the journey It made the whole experience stress-free and enjoyable. Highly recommend their services for anyone planning a trip</div>
+
+<div class="review">
+<h4>Patel Chintu</h4>
+<div class="stars">★★★★★</div>
+<p>Perfect Goa trip experience. Highly recommended!</p>
+</div>
+
+<div class="review">
+<h4>Newedge Realty</h4>
+<div class="stars">★★★★★</div>
+<p>Company trip was perfectly organized and smooth.</p>
+</div>
+
+<div class="review">
+<h4>Nitu Khatri</h4>
+<div class="stars">★★★★★</div>
+<p>75 employees trip handled flawlessly. Amazing team!</p>
+</div>
+
+<div class="review">
+<h4>Akshay Dhiryan</h4>
+<div class="stars">★★★★★</div>
+<p>Great travel experience with excellent service.</p>
+</div>
+
 </div>
 </section>
 
-<!-- FORM -->
 <section id="contact">
 <h2>Get Travel Quote</h2>
 
 <div class="form">
-<input type="text" id="name" placeholder="Your Name">
-<input type="tel" id="phone" placeholder="Phone Number">
-
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
 <select id="destination">
-<option value="">Select Destination</option>
 <option>Kashmir</option>
 <option>Dubai</option>
 <option>Thailand</option>
-<option>Maldives</option>
-<option>Goa</option>
-<option>Rajasthan</option>
-<option>Bali</option>
-<option>Europe</option>
-<option>Leh-Ladakh</option>
-<option>Darjeeling</option>
-<option>Hong-Kong</option>
 </select>
-
-<button onclick="sendToWhatsApp()">Submit</button>
+<button onclick="send()">Submit</button>
 </div>
 </section>
 
-<!-- ADDRESS -->
 <div class="address-box">
 <h3>Our Office</h3>
-<p>SF 33, Vartali Complex, Swastik Rd, Shrimali Society, Navrangpura, Ahmedabad, Gujarat 380009</p>
+<p>SF 33, Vartali Complex, Navrangpura, Ahmedabad</p>
+<p>Email: inquiry@thetripmakers.co.in</p>
 </div>
 
-<!-- FOOTER -->
 <footer>
 <p>© 2026 The Trip Makers</p>
+
 <div class="social">
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/the_trip_makers_/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/thetripmakersfacebook"><i class="fab fa-facebook"></i></a>
+<a href="https://www.linkedin.com/company/the-trip-makers-ek-suhana-safar/about/"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:inquiry@thetripmakers.co.in"><i class="fas fa-envelope"></i></a>
 </div>
+
 </footer>
 
 <a href="https://wa.me/919725083954" class="whatsapp">
@@ -277,17 +266,10 @@ Had a wonderful trip to Nainital with this travel company. Everything was smooth
 </a>
 
 <script>
-function sendToWhatsApp(){
-let n=document.getElementById("name").value;
-let p=document.getElementById("phone").value;
-let d=document.getElementById("destination").value;
-
-if(n==""||p==""||d==""){
-alert("Fill all details");return;
-}
-
-let msg=`New Inquiry:%0AName:${n}%0APhone:${p}%0ADestination:${d}`;
-window.open("https://wa.me/919725083954?text="+msg);
+function send(){
+let n=name.value,p=phone.value,d=destination.value;
+if(!n||!p||!d){alert("Fill all");return;}
+window.open(`https://wa.me/919725083954?text=Name:${n}%0APhone:${p}%0ADestination:${d}`);
 }
 </script>
 
